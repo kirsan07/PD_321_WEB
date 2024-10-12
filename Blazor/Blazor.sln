@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBinding", "DataBinding\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorMovieApp", "BlazorMovieApp\BlazorMovieApp.csproj", "{FFC06A7C-9CED-4830-9F09-E2ADDF86B18E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAppPD_212", "BlazorAppPD_212\BlazorAppPD_212.csproj", "{9E76EBE1-E114-4629-AC9D-6F61544FFE96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContosoCrafts", "ContosoCrafts\ContosoCrafts.csproj", "{E1C8647B-D27C-4ECF-872D-2A15BC662C50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContosoCrafts", "ContosoCrafts\ContosoCrafts.csproj", "{E1C8647B-D27C-4ECF-872D-2A15BC662C50}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAppPD_321", "BlazorAppPD_321\BlazorAppPD_321.csproj", "{C1195581-C4E8-48DE-B87B-162CB1B94478}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAppPD_212", "BlazorAppPD_212\BlazorAppPD_212.csproj", "{CC5F4DA3-7AB0-4299-9B6F-109EE293E4D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,14 +33,18 @@ Global
 		{FFC06A7C-9CED-4830-9F09-E2ADDF86B18E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFC06A7C-9CED-4830-9F09-E2ADDF86B18E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFC06A7C-9CED-4830-9F09-E2ADDF86B18E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9E76EBE1-E114-4629-AC9D-6F61544FFE96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E76EBE1-E114-4629-AC9D-6F61544FFE96}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9E76EBE1-E114-4629-AC9D-6F61544FFE96}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9E76EBE1-E114-4629-AC9D-6F61544FFE96}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E1C8647B-D27C-4ECF-872D-2A15BC662C50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E1C8647B-D27C-4ECF-872D-2A15BC662C50}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1C8647B-D27C-4ECF-872D-2A15BC662C50}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1C8647B-D27C-4ECF-872D-2A15BC662C50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1195581-C4E8-48DE-B87B-162CB1B94478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1195581-C4E8-48DE-B87B-162CB1B94478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1195581-C4E8-48DE-B87B-162CB1B94478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1195581-C4E8-48DE-B87B-162CB1B94478}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC5F4DA3-7AB0-4299-9B6F-109EE293E4D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC5F4DA3-7AB0-4299-9B6F-109EE293E4D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC5F4DA3-7AB0-4299-9B6F-109EE293E4D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC5F4DA3-7AB0-4299-9B6F-109EE293E4D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
