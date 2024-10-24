@@ -20,5 +20,7 @@ namespace MvcMovie.Controllers
             //return "This is the Welcome action method...";
         }
         //HTTP-endpoint
+        //Data base context - используется как служба (сервис). Эта служба зарегестрирована в Programm.cs при прмощи WebApplication.CreateBuilder(args)
+        
     }
 }
