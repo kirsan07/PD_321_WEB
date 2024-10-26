@@ -14,13 +14,18 @@ namespace MvcMovie.Controllers
         //{
         //    return "This is my default action...";
         //}
-        public string Welcome(string name, int numTimes)
-        {
-            return HtmlEncoder.Default.Encode($"Hello {name}, NumTimes is: {numTimes}");
-            //return "This is the Welcome action method...";
-        }
+        //public string Welcome(string name, int numTimes)
+        //{
+        //    return HtmlEncoder.Default.Encode($"Hello {name}, NumTimes is: {numTimes}");
+        //    //return "This is the Welcome action method...";
+        //}
         //HTTP-endpoint
-        //Data base context - используется как служба (сервис). Эта служба зарегестрирована в Programm.cs при прмощи WebApplication.CreateBuilder(args)
-        
+
+        public IActionResult Welcome(string name, int numTimes)
+        { 
+            ViewData["Message"] = $"Hello {name}";
+            ViewData["numTimes"] = numTimes;
+            return View();
+        }
     }
 }
