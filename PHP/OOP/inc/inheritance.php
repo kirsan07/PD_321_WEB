@@ -31,7 +31,7 @@ class Human
 	}
 
 	//				Constructors:
-	function __construct($first_name, $last_name, $age)
+	function __construct($first_name = "", $last_name = "", $age = 0)
 	{
 		$this->set_first_name($first_name);
 		$this->set_last_name($last_name);
@@ -43,7 +43,22 @@ class Human
 		echo 'HDestructor<br>';
 	}
 
+	function init($line)
+	{
+		$values = explode(',', $line);
+		$this->first_name = $values[0];
+		$this->last_name = $values[1];
+		$this->age = $values[2];
+		return $this;
+	}
+
 	function info(){}
+	function csv()
+	{
+		//CSV - Comma Separated Values
+		$type = get_class($this);
+		return "{$type}:{$this->first_name},{$this->last_name},{$this->age}";
+	}
 
 	function __tostring()
 	{
@@ -94,7 +109,7 @@ class Student extends Human
 	}
 
 	//				Construct:
-	function __construct($first_name, $last_name, $age, $speciality, $group, $rating, $attandance)
+	function __construct($first_name = "", $last_name = "", $age = 0, $speciality = "N/A", $group = "N/A", $rating=0, $attandance=0)
 	{
 		parent::__construct($first_name, $last_name, $age);
 		$this->set_speciality($speciality);
@@ -108,11 +123,25 @@ class Student extends Human
 		echo 'SConstructor<br>';
 	}
 
+	function init($line)
+	{
+		parent::init($line);
+		$values = explode(',', $line);
+		$this->speciality = $values[3];
+		$this->group = $values[4];
+		$this->rating = $values[5];
+		$this->attendance = $values[6];
+		return $this;
+	}
+
 	function info()
 	{
 		return "Group:{$this->get_group()}, Rating:{$this->get_rating()}, Attendance:{$this->get_attendence()}";
 	}
-
+	function csv()
+	{
+		return parent::csv() . ",{$this->speciality},{$this->group},{$this->rating},{$this->attendance}";
+	}
 	function __tostring()
 	{
 		echo '<pre>';
@@ -135,7 +164,7 @@ class Graduate extends Student
 		$this->subject=$subject;
 	}
 	//				Construct:
-	function __construct($first_name, $last_name, $age, $speciality, $group, $rating, $attandance, $subject)
+	function __construct($first_name="", $last_name="", $age=0, $speciality="N/A", $group="N/A", $rating=0, $attandance=0, $subject="N/A")
 	{
 		parent::__construct($first_name, $last_name, $age, $speciality, $group, $rating, $attandance);
 		$this->set_subject($subject);
@@ -146,9 +175,20 @@ class Graduate extends Student
 		echo '<pre>GDestructor</pre><br>';
 	}
 
+	function init($line)
+	{
+		parent::init($line);
+		$this->subject = explode(',', $line)[7];
+		return $this;
+	}
+
 	function info()
 	{
 		return parent::info() . " Subject:{$this->get_subject()}";
+	}
+	function csv()
+	{
+		return parent::csv() . ",{$this->subject}";
 	}
 
 	function __tostring()
@@ -179,7 +219,7 @@ class Teacher extends Human
 		$this->experience=$experience;
 	}
 	//				Construct:
-	function __construct($first_name, $last_name, $age, $speciality, $experience)
+	function __construct($first_name="", $last_name="", $age=0, $speciality="N/A", $experience=0)
 	{
 		parent::__construct($first_name, $last_name, $age);
 		$this->set_speciality($speciality);
@@ -191,11 +231,23 @@ class Teacher extends Human
 		echo 'TDestructor<br>';
 	}
 
+	function init($line)
+	{
+		parent::init($line);
+		$values = explode(',', $line);
+		$this->speciality = $values[3];
+		$this->experience = $values[4];
+		//var_dump($this);
+		return $this;
+	}
 	function info()
 	{
 		return "Experience:{$this->get_experience()}";
 	}
-
+	function csv()
+	{
+		return parent::csv() . ",{$this->speciality},{$this->experience}";
+	}
 	function __tostring()
 	{
 		return parent::__tostring() . " {$this->speciality} {$this->experience}";

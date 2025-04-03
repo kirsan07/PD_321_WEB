@@ -1,6 +1,8 @@
 <?php
 require_once __DIR__ . '/point.php';
 require_once __DIR__ . '/inheritance.php';
+require_once __DIR__ . '/data.php';
+require_once __DIR__ . '/functions.php';
 
 //$A = new Point();
 ////$A->set_x(1024);
@@ -26,14 +28,14 @@ echo $teacher . '<hr>';
 $graduate = new Graduate('Hank', 'Schreder', 40, 'Criminalistic', 'OBN', 80, 60, 'How to catch Heisenberg');
 echo $graduate;*/
 
-$group =
+/*$group =
 	[
 		new Student('Jessie', 'Pinkman', 25, 'Chemistry', 'WW_220', 95, 98),
 		new Teacher('Walter', 'White', 50, 'Chemistry', 25),
 		new Graduate('Hank', 'Schreder', 40, 'Criminalistic', 'OBN', 80, 60, 'How to catch Heisenberg'),
 		new Student('Tommy', 'Vercetty', 30, 'Theft', 'Vice', 95, 98),
 		new Teacher('Ricardo', 'Diaz', 55, 'Weapons distribution', 20)
-	];
+	];*/
 
 echo '<pre>';
 //echo get_class($group[0]);
@@ -48,7 +50,7 @@ echo '<pre>';
 //echo '<hr>';
 echo '</pre>';
 
-echo '<table>';
+/*echo '<table>';
 echo '<tr>';
 echo '<th>First name</th><th>Last name</th><th>Age</th><th>Speciality</th><th>Info</th>';
 echo '</tr>';
@@ -71,6 +73,28 @@ for ($i = 0; $i < count($group); $i++) {
 	echo '</td>';
 	echo '</tr>';
 }
-echo '</table>';
+echo '</table>';*/
+
+//////////////////////////////////////////////////////////////
+
+//save($group, "group.csv");
+//echo '<pre>';
+//$group = load("group.csv");
+//echo '</pre>';
+
+//table_group($group);
+
+//echo serialize($group);
+
+//$file = fopen("serial.txt", "w");
+//fwrite($file, serialize($group));
+//fclose($file);
+
+file_put_contents("walter.txt", serialize($group));
+table_group(unserialize(file_get_contents("walter.txt")));
+
+//$buffer = file_get_contents("serial.txt");
+//$group = unserialize($buffer);
+//table_group($group);
 
 ?>
